@@ -1,13 +1,12 @@
 import React from 'react';
 import './APP1.scss';
 import 'antd/dist/antd.css';
-import Login from '../src/login/login'
+import LL from './layout'
 function App() {
   return (
-    <div className="App">
-
-        <Login></Login>
-    </div>
+        <div className='App'>
+            <LL></LL>
+        </div>
   );
 }
 

@@ -4,6 +4,7 @@ import {Input,Form,Button,Icon,Checkbox} from "antd";
 
 
 class NormalLoginForm extends React.Component {
+
     handleSubmit = e => {
         e.preventDefault();
         this.props.form.validateFields((err, values) => {
@@ -47,7 +48,7 @@ class NormalLoginForm extends React.Component {
                         Forgot password
                     </a>
                     <div>
-                        <Button type="primary" htmlType="submit" className="login-form-button" style={{width:'100%'}}>
+                        <Button type="primary" htmlType="submit" className="login-form-button" style={{width:'100%'}} >
                             Log in
                         </Button>
                     </div>
@@ -61,14 +62,17 @@ class NormalLoginForm extends React.Component {
 const WrappedNormalLoginForm = Form.create({ name: 'normal_login' })(NormalLoginForm);
 
 
-class login extends Component{
+class Login extends Component{
 
     constructor (props) {
         super(props);
+        this.state={
+            num:1
+        }
     }
 
+
     render(){
-        console.log(this.props)
         return (
             <div style={{background:`url(${require('./login.jpg')}) no-repeat center center`,backgroundSize:'100%',height:'650px',}}>
                 <div style={{background:'white',width:"400px",display:'flex',justifyContent:'center',alignItems:'center',position:'absolute',right:'30px',bottom:'260px',paddingTop:'40px',borderRadius:'20px'}} >
@@ -82,4 +86,4 @@ class login extends Component{
 
 
 
-export  default  login
+export  default  Login
