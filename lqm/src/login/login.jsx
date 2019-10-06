@@ -1,6 +1,40 @@
 import React,{Component} from "react";
 import {Input,Form,Button,Icon,Checkbox} from "antd";
+import { createStore, combineReducers, applyMiddleware } from 'redux'
 
+function user(state = {name: 'redux'}, action) {
+    switch (action.type) {
+        case 'CHANGE_NAME':
+            return {
+                ...state,
+                name: action.name
+            }
+    }
+
+    return state
+}
+
+function project(state = {name: 'min-react'}, action) {
+    switch (action.type) {
+        case 'CHANGE_NAME':
+            return {
+                ...state,
+                name: action.name
+            }
+    }
+
+    return state
+}
+
+
+var rootReducer = combineReducers({
+    user,
+    project
+})
+
+var store = createStore(rootReducer)
+
+console.log(store.getState())
 
 
 class NormalLoginForm extends React.Component {
@@ -74,7 +108,7 @@ class Login extends Component{
 
     render(){
         return (
-            <div style={{background:`url(${require('./login.jpg')}) no-repeat center center`,backgroundSize:'100%',height:'650px',}}>
+            <div style={{background:`url(${require('./down.jpg')}) no-repeat center center`,backgroundSize:'100%',height:'750px',}}>
                 <div style={{background:'white',width:"400px",display:'flex',justifyContent:'center',alignItems:'center',position:'absolute',right:'30px',bottom:'260px',paddingTop:'40px',borderRadius:'20px'}} >
                     <WrappedNormalLoginForm ></WrappedNormalLoginForm>
                 </div>

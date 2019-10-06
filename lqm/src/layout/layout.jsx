@@ -1,7 +1,14 @@
 import { Layout, Menu, Breadcrumb } from 'antd';
 import  React from 'react'
 import './laout.css'
+import BK from '../bk'
+import BOOK from '../book'
+import MUSIC from '../music'
+import MOVIES from '../movies'
+
+import {Switch,Route} from 'react-router-dom'
 const { Header, Content, Footer } = Layout;
+
 class Layouts extends React.Component{
     constructor (props) {
         super(props);
@@ -15,23 +22,39 @@ class Layouts extends React.Component{
                         <Menu
                             theme="dark"
                             mode="horizontal"
-                            defaultSelectedKeys={['2']}
+                            defaultSelectedKeys={['1']}
                             style={{ lineHeight: '64px' }}
+                            onClick={(item)=>{
+                                if(item.key==1){
+                                    this.props.history.push('/else/bk')
+
+                                }
+                                if(item.key==2){
+                                    this.props.history.push('/else/book')
+                                }
+                                if(item.key==3){
+                                    this.props.history.push('/else/music')
+                                }
+                                if(item.key==4){
+                                    this.props.history.push('/else/movies')
+                                }
+                            }}
                         >
-                            <Menu.Item key="1">nav 1</Menu.Item>
-                            <Menu.Item key="2">nav 2</Menu.Item>
-                            <Menu.Item key="3">nav 3</Menu.Item>
+                            <Menu.Item key="1">博客</Menu.Item>
+                            <Menu.Item key="2">书籍</Menu.Item>
+                            <Menu.Item key="3">音乐</Menu.Item>
+                            <Menu.Item key="4">电影</Menu.Item>
                         </Menu>
                     </Header>
                     <Content style={{ padding: '0 50px' }}>
-                        <Breadcrumb style={{ margin: '16px 0' }}>
-                            <Breadcrumb.Item>Home</Breadcrumb.Item>
-                            <Breadcrumb.Item>List</Breadcrumb.Item>
-                            <Breadcrumb.Item>App</Breadcrumb.Item>
-                        </Breadcrumb>
-                        <div style={{ background: '#fff', padding: 24, minHeight: 280 }}>Content</div>
+                        <Switch>
+                            <Route path={this.props.match.path+'/bk'} component={BK} ></Route>
+                            <Route path={this.props.match.path+'/book'} component={BOOK} ></Route>
+                            <Route path={this.props.match.path+'/music'} component={MUSIC} ></Route>
+                            <Route path={this.props.match.path+'/movies'} component={MOVIES} ></Route>
+                        </Switch>
                     </Content>
-                    <Footer style={{ textAlign: 'center' }}>Ant Design ©2018 Created by Ant UED</Footer>
+                    <Footer style={{ textAlign: 'center' }}></Footer>
                 </Layout>
             </div>
         )

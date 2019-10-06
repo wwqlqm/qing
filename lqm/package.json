@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "antd": "^3.23.2",
+    "for-editor": "^0.3.4",
     "md5": "^2.2.1",
     "moment": "^2.24.0",
     "node-sass": "^4.12.0",
@@ -11,7 +12,9 @@
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
     "react-router-dom": "^5.0.1",
-    "react-scripts": "3.1.1"
+    "react-scripts": "3.1.1",
+    "redux": "^4.0.4",
+    "showdown": "^1.9.0"
   },
   "scripts": {
     "start": "react-scripts start",
