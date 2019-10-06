@@ -4,10 +4,10 @@ import traceback
 import os
 import time
 
-from common.base import BaseResponse
-from common.config import app
-from common.config import logger
-from common.config import init_views
+from utils.base import BaseResponse
+from config.config import app
+from config.config import logger
+from config.config import init_views
 
 from flask import g
 from flask import request

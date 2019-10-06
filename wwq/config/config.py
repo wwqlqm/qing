@@ -1,5 +1,5 @@
-from common import loggers
-from common import databases
+from utils import loggers
+from utils import databases
 from enum import Enum
 from enum import unique
 from werkzeug.contrib.fixers import ProxyFix
@@ -13,6 +13,15 @@ from flask_cors import CORS
 from flask_sqlalchemy import SQLAlchemy
 from flask_caching import Cache
 from celery import Celery
+
+import inspect
+import importlib
+CONFIG_NAME_MAPPER = {
+    'local': 'config.config.LocalConfig',
+    'product': 'local_config.ProductionConfig',
+    'dev': 'local_config.DevelopmentConfig',
+    'test': 'local_config.TestingConfig'
+}
 
 class LocalConfig():
     DEBUG = True

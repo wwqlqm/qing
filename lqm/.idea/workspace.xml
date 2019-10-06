@@ -3,11 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="ed4f79d3-0f7a-4310-b91d-d9eea332d69c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/layout/layout.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/layout/layout.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/login/login.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/login/login.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../wwq/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../wwq/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../wwq/run.py" beforeDir="false" afterPath="$PROJECT_DIR$/../wwq/run.py" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -286,15 +283,16 @@
       <workItem from="1569374989469" duration="2053000" />
       <workItem from="1569944381037" duration="2191000" />
       <workItem from="1570034796153" duration="1951000" />
-      <workItem from="1570122904829" duration="14118000" />
+      <workItem from="1570122904829" duration="14294000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="41329000" />
+    <option name="totallyTimeSpent" value="41505000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="821" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24947146" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
