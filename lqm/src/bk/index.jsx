@@ -6,7 +6,7 @@ class BK extends React.Component{
     render() {
         return (
             <Switch>
-                <Route path={this.props.match.path + '/writebk'} component={WRITEBK}></Route>
+                <Route path={this.props.match.path + '/write'} component={WRITEBK}></Route>
                 <Route path={this.props.match.path} component={SHOWBK}></Route>
                 {/*<Route></Route>*/}
                 {/*<Route></Route>*/}
