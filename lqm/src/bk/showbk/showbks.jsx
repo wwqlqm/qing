@@ -1,5 +1,5 @@
 import React from 'react'
-import {Row,Col,Card,List,Avatar,Input,Tag} from 'antd'
+import {Row,Col,Card,List,Avatar,Input,Tag,Button} from 'antd'
 const {Meta} = Card;
 const {Search} = Input
 class SHOWBK extends  React.Component{
@@ -48,8 +48,9 @@ class SHOWBK extends  React.Component{
                        <Row>
                            <div>
                                <Search placeholder="input search text" onSearch={value => console.log(value)} enterButton />
-
                            </div>
+                           <br/>
+                           <Button type={"primary"} style={{width:'100%'}} onClick={()=>{console.log(this.props.history.push('/else/bk/write'))}}>写文章</Button>
                        </Row>
                        <br/>
                        <Row>
@@ -73,7 +74,7 @@ class SHOWBK extends  React.Component{
                            itemLayout="horizontal"
                            dataSource={this.state.data}
                            renderItem={item => (
-                               <List.Item style={{marginTop:'10px',textAlign:'left'}} >
+                               <List.Item style={{marginTop:'30px',marginBottom:'20px',textAlign:'left'}} >
                                    <List.Item.Meta
                                        avatar={<Avatar src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />}
                                        title={<a href="https://ant.design">{item.title}</a>}
